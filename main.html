@@ -57,7 +57,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Updated heading to match test expectation -->
         <h1 id="verification_heading">Verify Your Account</h1>
         <p id="verification_subtext">Enter the 6-digit code sent to your phone.</p>
         <div class="code-container">
@@ -86,6 +85,11 @@
                     inputs[index - 1].focus();
                 }
             });
+
+            // Focus the first input on page load if no input has focus
+            if (index === 0) {
+                input.focus();
+            }
         });
     </script>
 </body>
